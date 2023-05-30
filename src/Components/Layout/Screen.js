@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, Container, Row, Col } from "react-bootstrap";
 
 
 const Screen = props =>{
@@ -50,11 +51,25 @@ const Screen = props =>{
         
 
     return(<>
-        <div className="Container">
+        <Container className="mt-3">
+        <Row md={3}>
             {productsArr.map((e)=>{
-                return (<><h1>{e.title}</h1><p>{e.price}</p><img src={e.imageUrl} alt="hel"></img></>)
+                return (
+                    <Col sm={4}>
+                        <div className="holder" style={{margin:'10px'}}>
+                <Card>
+                <Card.Img src={e.imageUrl} alt="hel"></Card.Img>
+                <Card.Body>
+                    <Card.Title>{e.title}</Card.Title>
+                <p>{e.price}</p>
+                </Card.Body>
+                </Card>
+                </div>
+                </Col>)
             })}
-        </div>
+            </Row>
+            </Container>
+       
         </>
     );
 }
