@@ -36,8 +36,8 @@ function App() {
        
        
      
-        <Route path='home' element={<Meals/>}></Route>
-       <Route path="aboutus" element={<Aboutus/>}></Route>
+        <Route path='home' element={<Meals/>}/>
+       <Route path="aboutus" element={<Aboutus/>}/>
        </Routes>
       </BrowserRouter>
       
