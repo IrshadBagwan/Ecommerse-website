@@ -6,7 +6,9 @@ import classes from './CartItem.module.css';
 const CartItem = (props) => {
   const price = `$${props.price.toFixed(2)}`;
 
-  
+  const removehandler = () =>{
+    alert('hello')
+  }
 
   return (
    
@@ -20,7 +22,7 @@ const CartItem = (props) => {
         
        <td><p>{props.name}</p></td> 
        <td> <input type="number" style={{width:'30px'}}></input>
-        <Button variant='danger' style={{margin:'10px'}}>Remove</Button></td>
+        <Button onClick={removehandler} variant='danger' style={{margin:'10px'}}>Remove</Button></td>
       </tr>
      
  

@@ -19,7 +19,7 @@ const Header = props =>{
           <Navbar.Brand href="#home"><h1>MyStore</h1></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="/store">Store</Nav.Link>
             <Nav.Link href="/aboutus">Aboutus</Nav.Link>
             
           </Nav>

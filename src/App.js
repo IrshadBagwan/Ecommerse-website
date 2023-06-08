@@ -7,6 +7,7 @@ import CartContext from './Store/CartContext';
 import Practise from './Components/MealItem/practise'
 import { BrowserRouter as Router,Route,Link,Switch,Routes, BrowserRouter } from 'react-router-dom';
 import Aboutus from './Components/Meals/Aboutus';
+import Home from './Components/Meals/Home';
 
 
 function App() {
@@ -36,7 +37,9 @@ function App() {
        
        
      
-        <Route path='home' element={<Meals/>}/>
+        <Route path='/' element={<Meals/>}/>
+        <Route path='store' element={<Meals/>}/>
+        <Route path="/home" element={<Home/>}/>
        <Route path="aboutus" element={<Aboutus/>}/>
        </Routes>
       </BrowserRouter>
