@@ -27,3 +27,12 @@
     object-fit: cover;
     transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
   }
+
+  /* @media screen and (min-width: 480px) {
+   :root{
+      background-color: lightblue;
+      width: 500px;
+    }
+    
+  } */
+  

@@ -8,6 +8,7 @@ import Practise from './Components/MealItem/practise'
 import { BrowserRouter as Router,Route,Link,Switch,Routes, BrowserRouter } from 'react-router-dom';
 import Aboutus from './Components/Meals/Aboutus';
 import Home from './Components/Meals/Home';
+import Contactus from './Components/Layout/Contactus';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path='store' element={<Meals/>}/>
         <Route path="/home" element={<Home/>}/>
        <Route path="aboutus" element={<Aboutus/>}/>
+       <Route path="Contactus" element={<Contactus/>}/>
        </Routes>
       </BrowserRouter>
       
