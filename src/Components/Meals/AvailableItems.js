@@ -1,5 +1,5 @@
 import Card from "../UI/Card";
-import classes from "./AvailableMeals.module.css";
+import classes from "./AvailableItems.module.css";
 import MealItem from "../MealItem/MealItem";
 import { Row,Container,Col } from "react-bootstrap";
 
@@ -42,13 +42,13 @@ import { Row,Container,Col } from "react-bootstrap";
 //   },
 // ];
 
-const productsArr = [
+ export const productsArr = [
 
   {
   
   title: 'Colors',
 
-  id:'m1',
+  id:'1',
   
   price: 100,
   
@@ -60,7 +60,7 @@ const productsArr = [
   
   title: 'Black and white Colors',
 
-  id:'m2',
+  id:'2',
   
   price: 50,
   
@@ -72,7 +72,7 @@ const productsArr = [
   
   title: 'Yellow and Black Colors',
 
-  id:'m3',
+  id:'3',
   
   price: 70,
   
@@ -84,7 +84,7 @@ const productsArr = [
   
   title: 'Blue Color',
 
-  id:'m4',
+  id:'4',
   
   price: 100,
   
@@ -93,7 +93,7 @@ const productsArr = [
   }
   
   ];
-const AvailableMeals = () => {
+const AvailableItems = () => {
   const mealsList = productsArr.map((meal) => (
     <MealItem
       key={meal.id}
@@ -132,4 +132,4 @@ const AvailableMeals = () => {
   );
 };
 
-export default AvailableMeals;
+export default AvailableItems;

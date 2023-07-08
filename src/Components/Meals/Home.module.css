@@ -90,3 +90,11 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     margin: 0 auto;
 }
+
+
+@media (prefers-reduced-motion: no-preference){
+:root {
+    scroll-behavior: smooth;
+    min-width: 600px;
+}
+}
