@@ -1,0 +1,40 @@
+.meals {
+    max-width: 100rem;
+    padding-left: 50px;
+    width: 100%;
+    animation: meals-appear 1s ease-out forwards;
+    height:86.8vh;
+   
+  }
+
+
+  
+  .meals ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @keyframes meals-appear {
+    from {
+      opacity: 0;
+      transform: translateY(3rem);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  @media (max-width:600px){
+    .meals{
+      height: 100%;
+      margin-top: 25px;
+    }
+    .meals ul{
+       margin-top: 30px;
+    }
+   
+  }

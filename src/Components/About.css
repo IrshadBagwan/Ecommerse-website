@@ -1,0 +1,26 @@
+.sec{
+  
+   /* height: 100vh; */
+
+}
+.about{
+    height: 55vh;
+}
+
+
+
+@media (max-width:600px){
+   .sec{
+      
+       margin-bottom: 150px;
+   }
+   
+}
+
+@media (prefers-reduced-motion: no-preference){
+    :root {
+        scroll-behavior: smooth;
+        min-width: 600px;
+        height: auto;
+    }
+    }

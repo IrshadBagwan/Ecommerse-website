@@ -1,58 +1,44 @@
-import { Fragment, useState } from 'react';
-import Header from './Components/Layout/Header';
-import Items from './Components/Meals/Items'
-import Cart from './Components/Cart/Cart';
-import CartProvider from './Store/CartProvider';
-import CartContext from './Store/CartContext';
-import Practise from './Components/MealItem/practise'
-import { BrowserRouter as Router,Route,Link,Switch,Routes, BrowserRouter } from 'react-router-dom';
-import Aboutus from './Components/Meals/Aboutus';
-import Home from './Components/Meals/Home';
-import Contactus from './Components/Layout/Contactus';
-import Singleproductpage from './Components/Singleproductpage/Singleproductpage';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import About from './Components/About';
+import Cart from './Components/Cart';
+import Contact from './Components/Contact';
+import Login from './Components/Login';
+import Store from './Components/Store';
+import Home from './Components/Home';
+import SingleProduct from './Components/SingleProduct';
+import Error from './Components/Error';
+import Header from './Components/header/Header.js';
+import Fotter from './Components/Fotter';
+import AuthContext from './Components/Store/auth-context';
+import { useContext } from 'react';
+import Message from './Components/Message';
 
 
 function App() {
 
- 
+ const autctx = useContext(AuthContext);
 
-  const [cartIsShown, setCartIsShown] = useState(false);
+return (
+   <BrowserRouter>
+   <Header />
 
-  const showCartHandler = () =>{
-    setCartIsShown(true);
-  }
-
-  const hideCartHandler = () =>{
-    setCartIsShown(false);
-  }
-
-  return (
-    <CartProvider>
-    
-      
-      
-      {cartIsShown && <Cart onClose={hideCartHandler}/>}
-      <Header onShowCart={showCartHandler} />
-    
-      <BrowserRouter>
-     <Routes>
-       
-       
-    
-        <Route path='/' element={<Items/>}/>
-        <Route path='store' element={<Items/>}/>
-        <Route path="/home" element={<Home/>}/>
-       <Route path="aboutus" element={<Aboutus/>}/>
-       <Route path="Contactus" element={<Contactus/>}/>
-       <Route path="/store/product/:id" element={ <Singleproductpage/>}>
-        
-       </Route>
-      
-       </Routes>
-      </BrowserRouter>
-      
-      
-    </CartProvider>
+   <Routes>
+     <Route path="/" element={<Home/> }/>
+     {!autctx.isLoggedIn && <Route path="/store" element={<Login/>}/>}
+     {autctx.isLoggedIn && <Route path="/store" element={<Store/>}/>}
+     <Route path="/contact" element={<Contact/> }/>
+     <Route path="/about" element={<About/> }/>
+     <Route path="/login" element={<Login/> }/>
+     {!autctx.isLoggedIn && <Route path="/cart" element={<Message/>}/>}
+     {autctx.isLoggedIn && <Route path="/cart" element={<Cart/>}/>}
+     <Route path="/store/product/:id" element={<SingleProduct/> }/>
+     <Route path="*" element={<Error/> }/>
+   </Routes>
+  
+   <Fotter />
+   
+   </BrowserRouter>
+   
   );
 }
 

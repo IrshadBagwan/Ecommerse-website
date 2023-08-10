@@ -1,0 +1,33 @@
+.sec{
+    margin-top: 25px;
+    height: 100%;
+}
+
+.box{
+    display: flex;
+    gap: 50px;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+table{
+    width: 100%;
+    
+}
+
+@media (prefers-reduced-motion: no-preference){
+    :root {
+        scroll-behavior: smooth;
+        min-width: 600px;
+        height: auto;
+    }
+    }
+
+
+    @media (max-width:600px){
+        .sec{
+            height: 100vh;
+            margin-top: 160px;
+        }
+    }

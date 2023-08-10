@@ -12,10 +12,12 @@ const defaultCartState = {
 const cartReucer = (state, action) =>{
     if(action.type === 'ADD'){
          const updatedTotalAmount = state.totalAmount + action.item.price * action.item.amount;
-         console.log('Total Amount',state.totalAmount);
-         console.log('Item price',action.item.price);
-         console.log('item amount',action.item.amount);
-         console.log('The total amount is',updatedTotalAmount)
+        //  console.log('Total Amount',state.totalAmount);
+        //  console.log('Item price',action.item.price);
+        //  console.log('item amount',action.item.amount);
+
+        //  console.log('The total amount is',updatedTotalAmount)
+        
 
          const existigCartItemIndex = state.items.findIndex(
              
@@ -89,6 +91,7 @@ const CartProvider = props =>{
     const addItemToCartHandler = item =>{
     //    updateItems((i)=>console.log(i));
     //    console.log('This is item id',item.id)
+    
     console.log('The Item is',item);
 
      diapatchCartAction({type: 'ADD', item: item});
